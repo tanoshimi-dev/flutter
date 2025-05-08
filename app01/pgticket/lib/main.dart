@@ -62,15 +62,20 @@ class _QuizPageState extends State<QuizPage> {
       appBar: AppBar(
         title: const Text('Quiz App'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
+      body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/girl_programmer.jpg'),
+              fit: BoxFit.cover, // 画像を画面全体にフィット
+            ),
+          ),
+          child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
               question,
-              style: GoogleFonts.roboto(
+              style: GoogleFonts.yuseiMagic(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -80,7 +85,7 @@ class _QuizPageState extends State<QuizPage> {
             ...options.map((option) {
               return ElevatedButton(
                 onPressed: _nextQuestion,
-                child: Text(option, style: GoogleFonts.roboto(fontSize: 18)),
+                child: Text(option, style: GoogleFonts.yuseiMagic(fontSize: 18)),
               );
             }).toList(),
           ],
