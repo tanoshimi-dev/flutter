@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
+import 'package:pgticket/screens/home_screen.dart';
+import 'package:pgticket/screens/chart_screen.dart';
+
 void main() {
   runApp(const QuizApp());
 }
@@ -15,7 +19,8 @@ class QuizApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.robotoTextTheme(), // Google Fontsを適用
       ),
-      home: const QuizPage(),
+      // home: const ChartScreen(),
+      home: const HomeScreen(),
     );
   }
 }
